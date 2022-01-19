@@ -574,12 +574,86 @@ Projects
   opacity: 1;
   transform: scale(0.8);
 }
+
+@media screen and (min-width: 676px) {
+  .project-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .project-center {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .project-center {
+    grid-template-rows: 200px 200px;
+    grid-template-areas:
+      "a b b"
+      "a c d";
+    gap: 1rem;
+  }
+
+  .project-img {
+    height: 100%;
+  }
+
+  .project {
+    height: 100%;
+  }
+
+  .project-1 {
+    grid-area: a;
+  }
+  .project-2 {
+    grid-area: b;
+  }
+  .project-3 {
+    grid-area: c;
+  }
+  .project-4 {
+    grid-area: d;
+  }
+}
+
 /*
 =============== 
 Connect
 ===============
 */
+.connect {
+  min-height: 40vh;
+  position: relative;
+  padding: 10rem 0 5rem;
+  margin: 5rem 0;
+}
 
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.connect::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--clr-white);
+  opacity: 0.7;
+}
+
+.video-banner {
+  position: relative;
+}
 /*
 =============== 
 Skills
@@ -612,4 +686,4 @@ Single Page
 =============== 
 Products Page
 ===============
-*/ ;
+*/
